@@ -1,0 +1,29 @@
+.current-weather-card {
+  background: var(--card-bg);
+  border-radius: var(--card-border-radius);
+  padding: 1.5rem;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  box-shadow: var(--card-shadow);
+  color: var(--text-light);
+}
+
+.current-weather-card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.current-weather-temp {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.current-weather-details {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.current-weather-details span {
+  display: block;
+}

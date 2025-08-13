@@ -1,0 +1,33 @@
+.today-forecast-card {
+  background: var(--card-bg);
+  border-radius: var(--card-border-radius);
+  padding: 1rem;
+  backdrop-filter: blur(12px);
+  box-shadow: var(--card-shadow);
+  color: var(--text-light);
+}
+
+.hourly-row {
+  display: flex;
+  overflow-x: auto;
+  padding: 0.5rem 0;
+  gap: 1rem;
+}
+
+.hour-block {
+  flex: 0 0 auto;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 0.5rem;
+}
+
+.hour-block img {
+  width: 40px;
+  height: 40px;
+}
+
+.hour-block span {
+  display: block;
+  font-size: 0.8rem;
+}

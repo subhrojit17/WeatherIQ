@@ -1,0 +1,23 @@
+.week-forecast-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  padding: 1rem;
+  backdrop-filter: blur(8px);
+}
+
+.week-day {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.week-day:last-child {
+  border-bottom: none;
+}
+
+.week-day img {
+  width: 40px;
+  height: 40px;
+}

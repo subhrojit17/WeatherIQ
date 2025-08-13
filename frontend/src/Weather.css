@@ -1,0 +1,135 @@
+.weather-dashboard-root {
+  /* min-height: 100vh; */
+  padding: 2rem;
+  background: linear-gradient(160deg, #1e3c72, #2a5298);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather-dashboard-root.dark {
+  background: linear-gradient(160deg, #1e3c72, #2a5298);
+  color: #fff;
+}
+.weather-dashboard-root.light {
+  background: linear-gradient(160deg, #e0e7ff, #f8fafc);
+  color: #1e293b;
+}
+
+.weather-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Error message */
+.error-msg {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  background: rgba(255, 0, 0, 0.15);
+  border-left: 4px solid #ff4d4d;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+@keyframes cardStackIn {
+  0% {
+    opacity: 0;
+    transform: translateY(60px) scale(0.96) rotateZ(-2deg);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-8px) scale(1.03) rotateZ(1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotateZ(0deg);
+  }
+}
+
+.weather-grid > section {
+  flex: 1 1 320px;
+  min-width: 260px;
+  max-width: 370px;
+  background: rgba(255, 255, 255, 0.13);
+  border-radius: 2.2rem;
+  padding: 2.2rem 2rem 1.7rem 2rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.13),
+    0 1.5px 8px 0 rgba(31, 38, 135, 0.07);
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(18px) saturate(120%);
+  -webkit-backdrop-filter: blur(18px) saturate(120%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  transition: box-shadow 0.25s, transform 0.25s;
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  animation: cardStackIn 0.85s cubic-bezier(.23,1.02,.47,.98) forwards;
+}
+.weather-grid > section:hover {
+  transform: translateY(-8px) scale(1.025);
+  box-shadow: 0 16px 48px 0 rgba(31, 38, 135, 0.18),
+    0 2px 12px 0 rgba(31, 38, 135, 0.1);
+}
+.weather-grid > section.dark {
+  background: rgba(255,255,255,0.13);
+  color: #fff;
+  border: 1.5px solid rgba(255,255,255,0.18);
+}
+.weather-grid > section.light {
+  background: rgba(255,255,255,0.85);
+  color: #1e293b;
+  border: 1.5px solid #e0e7ff;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07), 0 1.5px 8px 0 rgba(31,38,135,0.03);
+}
+
+.weather-grid h2,
+.weather-grid h3 {
+  color: inherit;
+}
+
+.weather-main.dark h2,
+.weather-main.dark h3,
+.weather-today.dark h2,
+.weather-today.dark h3,
+.weather-highlights.dark h2,
+.weather-highlights.dark h3 {
+  color: #fff;
+}
+.weather-main.light h2,
+.weather-main.light h3,
+.weather-today.light h2,
+.weather-today.light h3,
+.weather-highlights.light h2,
+.weather-highlights.light h3 {
+  color: #1e293b;
+}
+
+/* Weather icons color filter for dark/light mode */
+.weather-main.dark .cw-icon,
+.weather-today.dark .dfc-hour-icon,
+.weather-today.dark .dfc-week-day-icon,
+.weather-highlights.dark .dfc-week-day-icon {
+  filter: drop-shadow(0 2px 12px #0008);
+}
+.weather-main.light .cw-icon,
+.weather-today.light .dfc-hour-icon,
+.weather-today.light .dfc-week-day-icon,
+.weather-highlights.light .dfc-week-day-icon {
+  filter: drop-shadow(0 2px 12px #b0b8c9);
+}
+
+.weather-grid p {
+  color: rgba(255, 255, 255, 0.88);
+  text-align: center;
+  font-size: 1.08rem;
+  margin: 0.2rem 0 0.7rem 0;
+}
