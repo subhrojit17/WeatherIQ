@@ -1,0 +1,2 @@
+# WeatherIQ
+WeatherIQ is a sleek weather app built with React and Express, offering real-time local &amp; global forecasts, hourly/daily updates, and multi-location support. Features a responsive UI, reliable API data, and customizable alerts to keep you informed anytime, anywhere.
